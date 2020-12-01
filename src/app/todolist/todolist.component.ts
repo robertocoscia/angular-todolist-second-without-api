@@ -21,9 +21,9 @@ export class TodolistComponent implements OnInit {
   }
 
   modifyTask(index: number){
-   // let el= this.todos.indexOf(new Task())
+   
     this.todos.slice(index,index+1)
-    //console.log(el)
+    
   }
 
   removeTask(index: number){
