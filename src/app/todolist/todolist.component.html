@@ -1,0 +1,18 @@
+<button (click)="addTask()">Add Task</button>
+
+<div class=" mb-3" *ngFor="let todo of todos; let i=index">
+    <div class="input-group-prepend">
+        <span>Task number: {{i+1}}</span>
+        <span class="remove">
+            <button (click)='removeTask(i)'>X</button>
+        </span>   
+    </div>
+    <div>
+        <span class="input-group-text" id="inputGroup-sizing-sm">Action Name</span>
+        <input [(ngModel)]="todo.actionName" type="text" >
+        <button (click)="addTask()">Add</button>
+        <button (click)="modifyTask(i)">Modify</button>
+    </div> 
+</div>
+
+
